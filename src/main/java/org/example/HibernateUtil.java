@@ -11,7 +11,10 @@ public class HibernateUtil {
             sessionFactory = new Configuration().configure("hibernate.cfg.xml")
                     .addAnnotatedClass(Student.class)
                     .addAnnotatedClass(Question.class)
-                    .addAnnotatedClass(Answer.class).buildSessionFactory();
+                    .addAnnotatedClass(Answer.class)
+                    .addAnnotatedClass(IndianState.class)
+                    .addAnnotatedClass(City.class)
+                    .buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
