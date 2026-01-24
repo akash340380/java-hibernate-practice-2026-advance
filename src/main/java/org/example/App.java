@@ -52,8 +52,10 @@ public class App {
         state1.setStateName("Maharashtra");
         City city1 = new City();
         city1.setCityName("Mumbai");
+        city1.setState(state1); // many-to-one side
         City city2 = new City();
         city2.setCityName("Pune");
+        city2.setState(state1); // many-to-one side
         List<City> cityListState1 = new ArrayList<>();
         cityListState1.add(city1);
         cityListState1.add(city2);
@@ -64,12 +66,16 @@ public class App {
         state2.setStateName("Bihar");
         City city3 = new City();
         city3.setCityName("Patna");
+        city3.setState(state2); // many-to-one side
         City city4 = new City();
         city4.setCityName("Gaya");
+        city4.setState(state2); // many-to-one side
         City city5 = new City();
         city5.setCityName("Bhagalpur");
+        city5.setState(state2); // many-to-one side
         City city6 = new City();
         city6.setCityName("Muzaffarpur");
+        city6.setState(state2); // many-to-one side
         List<City> cityListState2 = new ArrayList<>();
         cityListState2.add(city3);
         cityListState2.add(city4);
